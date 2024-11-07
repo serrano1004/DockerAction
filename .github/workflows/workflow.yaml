@@ -18,7 +18,7 @@ jobs:
       - name: InfraConfig
         uses: ./actions # Usa la action creada en este repositorio.
         with:
-          command: "ls -la"
+          command: "sudo apt update -y"
 
       - name: Build
         run: echo "Building"
