@@ -1,5 +1,5 @@
 # Dockerfile
-FROM alpine:latest
+FROM ubuntu:latest
 
 ENTRYPOINT [ "sh", "-c" ]
 
