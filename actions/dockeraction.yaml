@@ -1,0 +1,17 @@
+# action.yml
+name: "InfraConfig Docker Action"
+description: "Custom action that runs inside a Docker container to manage configurations and secrets."
+inputs:
+  command:
+    description: "Command to execute inside the container"
+    required: true
+    default: "echo Ejecutando tests"
+
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  args:
+    - ${{ inputs.command }}
+branding:
+  icon: "box"
+  color: "blue"
