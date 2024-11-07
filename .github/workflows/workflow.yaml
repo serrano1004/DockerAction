@@ -21,7 +21,7 @@ jobs:
         uses: ./actions # Usa la action creada en este repositorio.
         with:
           command: "apt update -y"
-          secrets: "echo ${{ env.MY_API_KEY }}"
+          secrets: "echo Margarita"
 
       - name: Build
         run: echo "Building"
