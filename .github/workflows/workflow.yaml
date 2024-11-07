@@ -13,10 +13,10 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: InfraConfig
-        uses: ./actions/dockeraction # Usa la action creada en este repositorio.
+        uses: ./actions # Usa la action creada en este repositorio.
         with:
           command: "echo Custom Command"
 
