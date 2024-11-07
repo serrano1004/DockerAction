@@ -18,7 +18,7 @@ jobs:
       - name: InfraConfig
         uses: ./actions # Usa la action creada en este repositorio.
         with:
-          command: "echo Custom Command"
+          command: "ls -la"
 
       - name: Build
         run: echo "Building"
