@@ -1,4 +1,4 @@
-# action.yml
+# action.yaml
 name: "InfraConfig Docker Action"
 description: "Custom action that runs inside a Docker container to manage configurations and secrets."
 inputs:
@@ -10,11 +10,9 @@ inputs:
 runs:
   using: "docker"
   image: "Dockerfile"
-  env: 
-    api_key: ${{ secrets.CUSTOM_API_KEY }}
   args:
     - ${{ inputs.command }}
-    - echo ${{ api_key }}
+    - ${{ inputs.secrets }}
 branding:
   icon: "box"
   color: "blue"

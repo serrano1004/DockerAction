@@ -2,4 +2,3 @@
 FROM ubuntu:latest
 
 ENTRYPOINT [ "sh", "-c" ]
-
