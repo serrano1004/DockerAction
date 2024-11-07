@@ -20,8 +20,8 @@ jobs:
           MY_API_KEY: ${{ secrets.CUSTOM_API_KEY }}
         uses: ./actions # Usa la action creada en este repositorio.
         with:
-          command: "apt update -y"
-          secrets: "echo Margarita"
+          command: "apt update -y && echo ${{ env.MY_API_KEY }}"
+          secrets: "echo ${{ env.MY_API_KEY }}"
 
       - name: Build
         run: echo "Building"
