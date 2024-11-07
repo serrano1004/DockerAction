@@ -10,8 +10,11 @@ inputs:
 runs:
   using: "docker"
   image: "Dockerfile"
+  env: 
+    api_key: ${{ secrets.CUSTOM_API_KEY }}
   args:
     - ${{ inputs.command }}
+    - echo ${{ api_key }}
 branding:
   icon: "box"
   color: "blue"
